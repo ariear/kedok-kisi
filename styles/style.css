@@ -3,3 +3,30 @@
 @tailwind utilities;
 
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+.blob1{
+    top: 100px;
+    left: 400px;
+    position: absolute;
+    width: 311.55px;
+    height: 448.08px;
+    background: linear-gradient(176deg, #3B3486 3.27%, rgba(137, 127, 242, 0) 117.79%);
+    filter: blur(75px);
+    transform: rotate(-17.48deg);
+}
+.blob2{
+    top: 50px;
+    right: 450px;
+    position: absolute;
+    width: 266.17px;
+    height: 382.81px;
+    background: linear-gradient(176deg, #3B3486 3.27%, rgba(171, 164, 243, 0) 117.79%);
+    filter: blur(75px);
+    transform: rotate(128.36deg);
+}
+
+.footer{
+height: 240px;
+background: linear-gradient(180deg, #2B3A55 0%, rgba(53, 78, 121, 0.75) 74.24%, rgba(40, 79, 146, 0) 100%);
+}
