@@ -1,4 +1,4 @@
-const Table = () => {
+const Table = ({ exams }) => {
     return (
         <div className="bg-[#3B3486] text-white mb-20 w-[80vw] mx-auto rounded-lg p-7 font-rubik">
             <div className="bg-[#A3A0C3] flex w-[300px] px-3 py-2 rounded-lg mb-5">
@@ -16,55 +16,17 @@ const Table = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr className="border-b hover:bg-gray-700 transition-all">
-                        <td className="py-4 px-3">1</td>
-                        <td className="py-4 px-3">Mtk</td>
-                        <td className="py-4 px-3">XII</td>
-                        <td className="py-4 px-3">RPL</td>
-                        <td className="py-4 px-3">Download PDF</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-700 transition-all">
-                        <td className="py-4 px-3">1</td>
-                        <td className="py-4 px-3">Mtk</td>
-                        <td className="py-4 px-3">XII</td>
-                        <td className="py-4 px-3">RPL</td>
-                        <td className="py-4 px-3">Download PDF</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-700 transition-all">
-                        <td className="py-4 px-3">1</td>
-                        <td className="py-4 px-3">Mtk</td>
-                        <td className="py-4 px-3">XII</td>
-                        <td className="py-4 px-3">RPL</td>
-                        <td className="py-4 px-3">Download PDF</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-700 transition-all">
-                        <td className="py-4 px-3">1</td>
-                        <td className="py-4 px-3">Mtk</td>
-                        <td className="py-4 px-3">XII</td>
-                        <td className="py-4 px-3">RPL</td>
-                        <td className="py-4 px-3">Download PDF</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-700 transition-all">
-                        <td className="py-4 px-3">1</td>
-                        <td className="py-4 px-3">Mtk</td>
-                        <td className="py-4 px-3">XII</td>
-                        <td className="py-4 px-3">RPL</td>
-                        <td className="py-4 px-3">Download PDF</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-700 transition-all">
-                        <td className="py-4 px-3">1</td>
-                        <td className="py-4 px-3">Mtk</td>
-                        <td className="py-4 px-3">XII</td>
-                        <td className="py-4 px-3">RPL</td>
-                        <td className="py-4 px-3">Download PDF</td>
-                    </tr>
-                    <tr className="border-b hover:bg-gray-700 transition-all">
-                        <td className="py-4 px-3">1</td>
-                        <td className="py-4 px-3">Mtk</td>
-                        <td className="py-4 px-3">XII</td>
-                        <td className="py-4 px-3">RPL</td>
-                        <td className="py-4 px-3">Download PDF</td>
-                    </tr>
+                    {
+                        exams.map((exam,index) => (
+                            <tr key={exam._id} className="border-b hover:bg-gray-700 transition-all">
+                                <td className="py-4 px-3">{ index + 1 }</td>
+                                <td className="py-4 px-3">{ exam.subject }</td>
+                                <td className="py-4 px-3">{ exam.class }</td>
+                                <td className="py-4 px-3">{ exam.major }</td>
+                                <td className="py-4 px-3">Download PDF</td>
+                            </tr>
+                        ))
+                    }
                 </tbody>
             </table>   
         </div>
