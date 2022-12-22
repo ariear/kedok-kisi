@@ -17,7 +17,7 @@ const authpage = (ctx) => {
         }).end()
     }
 
-    return jwt.verify(token,process.env.DB_SECRET_KEY)
+    return token
 }
 
 const isAuthPage = (ctx) => {
