@@ -1,6 +1,6 @@
 const Table = ({ exams }) => {
     return (
-        <div className="bg-[#3B3486] text-white mb-20 w-[80vw] mx-auto rounded-lg p-7 font-rubik">
+        <div className="bg-[#3B3486] text-white mb-20 sm:w-[80vw] w-[95vw] relative overflow-scroll mx-auto rounded-lg p-7 font-rubik">
             <div className="bg-[#A3A0C3] flex w-[300px] px-3 py-2 rounded-lg mb-5">
                 <img src="search.png" className="mr-2" />
                 <input type="text" className="bg-transparent w-full text-black" />

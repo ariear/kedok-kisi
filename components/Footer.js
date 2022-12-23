@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
-        <footer className="footer flex justify-evenly text-white font-rubik pt-16">
-            <div>
+        <footer className="footer sm:h-[240px] flex justify-evenly text-white font-rubik pt-16 flex-wrap sm:pb-0 pb-5">
+            <div className="sm:p-0 p-2">
                 <p className="font-semibold tracking-wide mb-3">Social Media</p>
                 <div className="flex items-center">
                     <img src="youtube.png" className="mr-2" />
@@ -10,13 +10,13 @@ const Footer = () => {
                     <img src="twitter.png" />
                 </div>
             </div>
-            <div>
+            <div className="sm:p-0 p-2">
                 <p className="font-semibold tracking-wide mb-3">Official Website</p>
                 <div className="text-sm tracking-wide">
                     <p>gamecomteam.com</p>
                 </div>
             </div>
-            <div>
+            <div className="sm:p-0 p-2">
                 <p className="font-semibold tracking-wide mb-3">Features</p>
                 <ul className="text-sm tracking-wide">
                     <li className="mb-2">Kisi - kisi</li>
@@ -24,7 +24,7 @@ const Footer = () => {
                     <li>Bisa suap</li>
                 </ul>
             </div>
-            <div>
+            <div className="sm:p-0 p-2">
                 <p className="font-semibold tracking-wide mb-3">Thxs To</p>
                 <ul className="text-sm tracking-wide">
                     <li className="mb-2">Gusti Allah Pangeran</li>

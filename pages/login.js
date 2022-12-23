@@ -29,7 +29,7 @@ const LoginPage = () => {
     return (
         <Layout title="Login" >
             <div className="py-20">
-                <form onSubmit={(event) => loginHandle(event)} className="bg-[#3B3486] p-10 w-[700px] mx-auto rounded-lg text-white font-rubik">
+                <form onSubmit={(event) => loginHandle(event)} className="bg-[#3B3486] sm:p-10 p-5 md:w-[700px] w-[90vw] mx-auto rounded-lg text-white font-rubik">
                     <h1 className="text-center text-3xl font-semibold mb-10">Login</h1>
                     <div className="mb-5">
                         <p className="mb-2">Email</p>

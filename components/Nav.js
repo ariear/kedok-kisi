@@ -18,9 +18,9 @@ const Nav = () => {
     }
 
     return (
-        <nav className="flex items-center container mx-auto justify-between py-5 font-rubik tracking-wide">
-            <Link href="/"><img src="TBM_Standard_FullRGB.png" className="w-[150px]" /></Link>
-            <ul className="flex items-center text-white text-sm">
+        <nav className="flex items-center container mx-auto justify-between py-5 font-rubik tracking-wide xl:px-0 px-5">
+            <Link href="/"><img src="TBM_Standard_FullRGB.png" className="sm:w-[150px]" /></Link>
+            <ul className="sm:flex hidden items-center text-white text-sm">
                 <li className="mr-7"><Link href="/">Home</Link></li>
                 <li className="mr-7"><Link href="/exams">Kisi - kisi</Link></li>
                 {

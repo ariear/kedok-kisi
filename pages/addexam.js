@@ -39,7 +39,7 @@ const AddExamPage = ({ token }) => {
     return (
         <Layout title="Add New Exam" >
             <div className="py-20">
-                <form onSubmit={(e) => AddExamHandler(e)} className="bg-[#3B3486] p-10 w-[700px] mx-auto rounded-lg text-white font-rubik">
+                <form onSubmit={(e) => AddExamHandler(e)} className="bg-[#3B3486] sm:p-10 p-5 md:w-[700px] w-[90vw] mx-auto rounded-lg text-white font-rubik">
                     <h1 className="text-center text-3xl font-semibold mb-10">Tambah Kisi - Kisi</h1>
                     <div className="mb-5">
                         <p className="mb-2">Mata Pelajaran</p>
