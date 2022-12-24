@@ -1,9 +1,9 @@
-const Table = ({ exams }) => {
+const Table = ({ exams, keyword, keywordChange }) => {
     return (
-        <div className="bg-[#3B3486] text-white mb-20 sm:w-[80vw] w-[95vw] relative overflow-scroll mx-auto rounded-lg p-7 font-rubik">
+        <div className="bg-[#3B3486] text-white mb-20 sm:w-[80vw] w-[95vw] relative overflow-auto mx-auto rounded-lg p-7 font-rubik">
             <div className="bg-[#A3A0C3] flex w-[300px] px-3 py-2 rounded-lg mb-5">
                 <img src="search.png" className="mr-2" />
-                <input type="text" className="bg-transparent w-full text-black" />
+                <input type="text" value={keyword} onChange={(event) => keywordChange(event.target.value)} className="bg-transparent w-full text-black placeholder:text-gray-100" placeholder="Cari berdasarkan Mapel" />
             </div>
             <table className="table-auto w-full">
                 <thead className="border-b-4">
@@ -17,13 +17,20 @@ const Table = ({ exams }) => {
                 </thead>
                 <tbody>
                     {
-                        exams.map((exam,index) => (
+                        exams.filter((exam) => {
+                    if (keyword === '') {
+                        return exam
+                    }else if (exam.subject.toLowerCase().includes(keyword.toLowerCase())) {
+                        return exam
+                    }
+                    return false
+                    }).map((exam,index) => (
                             <tr key={exam._id} className="border-b hover:bg-gray-700 transition-all">
                                 <td className="py-4 px-3">{ index + 1 }</td>
                                 <td className="py-4 px-3">{ exam.subject }</td>
                                 <td className="py-4 px-3">{ exam.class }</td>
                                 <td className="py-4 px-3">{ exam.major }</td>
-                                <td className="py-4 px-3">Download PDF</td>
+                                <td className="py-4 px-3"><a href={`/${exam.pdf}`} download>Download PDF</a></td>
                             </tr>
                         ))
                     }

@@ -20,11 +20,20 @@ const AddExamPage = ({ token }) => {
         subject: '',
         classExam: '',
         major: '',
-        pdf: 'anjir test'
+        pdf: ''
     })
+    const [mengPDF, setMengPDF] = useState('')
 
     const AddExamHandler = async (e) => {
         e.preventDefault()
+
+        const body = new FormData();
+
+        body.append("file", mengPDF);    
+        const response = await fetch("/api/upload", {
+          method: "POST",
+          body
+        });
 
         const addexamReq = await axios.post('/api/exams/create', fields,{
             headers: {
@@ -55,9 +64,12 @@ const AddExamPage = ({ token }) => {
                     </div>
                     <div className="mb-10">
                         <p className="mb-2">Kisi - Kisi PDF</p>
-                        <input type="file" className="bg-[#A3A0C2] w-full p-3 rounded-lg" />
+                        <input type="file" className="bg-[#A3A0C2] w-full p-3 rounded-lg" onChange={(e) => {
+                                setFields({...fields, pdf: e.target.files[0].name}) 
+                                setMengPDF(e.target.files[0]) }
+                            } />
                     </div>
-                    <button className="bg-[#2B3A55] w-full py-3 rounded-lg font-semibold">Simpan</button>
+                    <button type="submit" className="bg-[#2B3A55] w-full py-3 rounded-lg font-semibold">Simpan</button>
                 </form>
             </div>
         </Layout>
