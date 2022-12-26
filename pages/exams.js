@@ -4,7 +4,7 @@ import Layout from "../components/Layout"
 import Table from "../components/Table"
 
 export async function getServerSideProps() {
-    const { data } = await axios.get('http://localhost:3000/api/exams')
+    const { data } = await axios.get('https://kedok-kisi.vercel.app/api/exams')
 
     return {
         props: {
